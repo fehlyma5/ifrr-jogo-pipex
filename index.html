@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missão IFRR: Desafio do Vestibular</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>🎓 Missão IFRR na Comunidade</h1>
+            <p>Campus Boa Vista - Ensino Superior Público e Gratuito</p>
+        </header>
+
+        <!-- Tela de Login / Cadastro -->
+        <div id="login-screen" class="screen">
+            <h2>Digite seu WhatsApp para iniciar:</h2>
+            <input type="text" id="phone-input" placeholder="(95) 99999-9999" maxlength="15">
+            <button id="start-btn">Entrar no Jogo 🚀</button>
+        </div>
+
+        <!-- Tela do Jogo (Canvas) -->
+        <div id="game-screen" class="screen hidden">
+            <div id="hud">
+                <span id="fase-txt">Fase: Recepção</span>
+                <span id="timer-txt">Tempo: 60s</span>
+                <span id="score-txt">Pontos: 0</span>
+            </div>
+            <canvas id="gameCanvas" width="800" height="400"></canvas>
+            <div class="controls-hint">
+                Use as <b>Setas ⬅️ ➡️</b> para mover e a <b>Barra de Espaço</b> para pular!
+            </div>
+        </div>
+
+        <!-- Tela de Vitória / Fim -->
+        <div id="gameover-screen" class="screen hidden">
+            <h2 id="end-title">Fim de Jogo!</h2>
+            <p id="final-score">Sua pontuação foi salva no ranking.</p>
+            <button onclick="location.reload()">Jogar Novamente 🔄</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
